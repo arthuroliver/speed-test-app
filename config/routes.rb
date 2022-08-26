@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'admins/index'
-  get 'users/index'
+  get 'admins_backoffice/index'
+  get 'users_backoffice/index'
   devise_for :users
   devise_for :admins
   get 'welcome/index'

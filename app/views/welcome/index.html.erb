@@ -5,7 +5,7 @@
     <%= current_user.email %>
   </p>
   <p>
-    <%= link_to "Go to user dashboard", users_index_path %>
+    <%= link_to "Go to user dashboard", users_backoffice_index_path %>
   </p>
   <p>
     <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -17,7 +17,7 @@
     <%= current_admin.email %>
   </p>
   <p>
-    <%= link_to "Go to admin dashboard", admins_index_path %>
+    <%= link_to "Go to admin dashboard", admins_backoffice_index_path %>
   </p>
   <p>
     <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
@@ -26,9 +26,9 @@
 
 <% if (!current_user && !current_admin).present? %>
   <p>
-    <%= link_to "Login as Admin", admins_index_path %>
+    <%= link_to "Login as Admin", admins_backoffice_index_path %>
   </p>
   <p>
-    <%= link_to "Login as User", users_index_path %>
+    <%= link_to "Login as User", users_backoffice_index_path %>
   </p>
 <% end %>

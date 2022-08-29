@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'admin_list/index'
+  resources :admin_list
   get 'admins_backoffice/index'
   get 'users_backoffice/index'
   devise_for :users

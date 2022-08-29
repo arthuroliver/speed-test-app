@@ -1,0 +1,28 @@
+Editing
+
+<%= form_with(model: @admin, url: admin_list_path, local: true) do |form| %>
+<p>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+</p>
+<p>
+  <%= form.label :password %>
+  <%= form.text_field :password, placeholder:"Enter password here" %>
+</p>
+<p>
+  <%= form.label :password_confirmation %>
+  <%= form.text_field :password_confirmation, placeholder:"Enter password here" %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+<% end %>
+
+<% if admin_signed_in? %>
+  <p>
+    <%= link_to "Go back to Admins list", admin_list_index_path %>
+  </p>
+  <p>
+    <%= link_to "Welcome page", :root %>
+  </p>
+<% end %>

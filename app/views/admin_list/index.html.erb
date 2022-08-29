@@ -4,7 +4,8 @@
 <% @admins.each do |admin| %>
   <p>
     ID: <%= admin.id %> -
-    Email: <%= admin.email %>
+    Email: <%= admin.email %> - 
+    <%= link_to 'Edit', edit_admin_list_path(admin) %>
   </p>
 <% end %>
 

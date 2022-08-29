@@ -1,0 +1,22 @@
+<h1>AdminList#index</h1>
+<p>Find me in app/views/admin_list/index.html.erb</p>
+
+<% @admins.each do |admin| %>
+  <p>
+    ID: <%= admin.id %> -
+    Email: <%= admin.email %>
+  </p>
+<% end %>
+
+
+<% if admin_signed_in? %>
+  <p>
+    <%= link_to "Go back to the welcome page", :root %>
+  </p>
+  <p>
+    <%= link_to "Admin Backoffice", admins_backoffice_index_path %>
+  </p>
+  <p>
+    <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
+  </p>
+<% end %>

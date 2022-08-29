@@ -6,6 +6,9 @@
     <%= link_to "Go back to the welcome page", :root %>
   </p>
   <p>
+    <%= link_to "Admin listing", admin_list_index_path %>
+  </p>
+  <p>
     <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
   </p>
 <% end %>

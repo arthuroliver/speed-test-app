@@ -1,6 +1,6 @@
 class AdminListController < ApplicationController
   before_action :authenticate_admin!
-  before_action :set_admin, only: [:edit, :update]
+  before_action :set_admin, only: [:edit, :update, :destroy]
 
   def index
     @admins = Admin.all
@@ -15,6 +15,11 @@ class AdminListController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @admin.destroy
+    redirect_to admin_list_index_path, notice: "Deleted with success!"
   end
 
   private

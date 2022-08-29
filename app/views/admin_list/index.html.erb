@@ -5,7 +5,8 @@
   <p>
     ID: <%= admin.id %> -
     Email: <%= admin.email %> - 
-    <%= link_to 'Edit', edit_admin_list_path(admin) %>
+    <%= link_to 'Edit', edit_admin_list_path(admin) %> - 
+    <%= link_to 'Delete', admin_list_path(admin), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
   </p>
 <% end %>
 

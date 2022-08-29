@@ -1,5 +1,11 @@
 Editing
 
+<% if @admin.errors.any?%>
+  <% @admin.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+<% end %>
+
 <%= form_with(model: @admin, url: admin_list_path, local: true) do |form| %>
 <p>
   <%= form.label :email %>
